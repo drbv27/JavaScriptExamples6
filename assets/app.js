@@ -44,7 +44,7 @@ const validarNombre = (nombre="") => {
     if (!nombre) return console.warn("No ingresaste un nombre")
     if (typeof nombre !=="string") return console.error(`El valor "${nombre}" ingresado NO es una cadena de texto`)
 
-    if (/^[a-zA-Z]+ [a-zA-Z]+$/.test(nombre)){
+    if (/^[a-zA-Z]+ [a-zA-Z]+$/.test(nombre)){ //if you want use regular expresion for spanish: ^[a-zA-ZÑñáÁéÉíÍóÚÜü\s]+/g
         console.info(`El nombre: ${nombre}, es valido.`)
     } else {
         console.error(`"${nombre}" no es valido como nombre.`)
@@ -61,7 +61,7 @@ const validarEmail = (email="") => {
     if (!email) return console.warn("No ingresaste un correo")
     if (typeof email !=="string") return console.error(`El valor "${email}" ingresado NO es una cadena de texto`)
 
-    if (/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/i.test(email)){
+    if (/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/i.test(email)){ //another reg expression maybe: /[a-z0-9]+(\.[_a-z0-9]+(\.[a-z]{2,15}))/i
         console.info(`El email: ${email}, es valido.`)
     } else {
         console.error(`"${email}" no es valido como email.`)
